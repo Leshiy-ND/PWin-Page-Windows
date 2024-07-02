@@ -30,7 +30,9 @@ function register_pregenerated_draggables() {
             })
             draggable_window.style.zIndex = highest_draggable
             console.log(draggable_window.style.zIndex)
+        })
 
+        draggable_window.querySelector('.draggable_handle').addEventListener('mousedown', (e) => {
             isGrabbed = true
             startX = e.clientX
             startY = e.clientY
@@ -38,7 +40,7 @@ function register_pregenerated_draggables() {
             initialY = draggable_window.offsetTop
         })
     
-        draggable_window.addEventListener('mousemove', (e) => {
+        draggable_window.querySelector('.draggable_handle').addEventListener('mousemove', (e) => {
             if (isGrabbed) {
                 const newX = initialX + e.clientX - startX
                 const newY = initialY + e.clientY - startY
@@ -48,7 +50,7 @@ function register_pregenerated_draggables() {
             }
         })
     
-        draggable_window.addEventListener('mouseup', (e) => {
+        draggable_window.querySelector('.draggable_handle').addEventListener('mouseup', (e) => {
             isGrabbed = false
         })
     })

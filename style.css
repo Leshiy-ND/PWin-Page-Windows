@@ -7,16 +7,26 @@
     pointer-events: none;
 }
 
+.draggable_handle {
+    height: max-content;
+    width:  max-content;
+    background-color: black;
+    color: wheat;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    cursor: grab;
+}
+
 .draggable_window {
     background-color: tan;
     border: 2px solid sienna;
-    padding: 0.5rem;
     border-radius: 1rem;
+    padding: 0.5rem;
     width: max-content;
     left: 0;
     top: 0;
 
     position: absolute;
-    cursor: grab;
     pointer-events: all;
 }
