@@ -1,32 +1,55 @@
 let WEBISTE_DIR = ''
+let highest_draggable = 10
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     let curentURL = window.location.href
     WEBISTE_DIR = curentURL.substring(0, curentURL.lastIndexOf('/') + 1)
 
-    document.querySelectorAll('.draggable_div').forEach(draggable_div => {
-        let isDragged = false, startX, startY, initialX, initialY
+    register_pregenerated_draggables()
+})
 
-        draggable_div.addEventListener('mousedown', (e) => {
-            isDragged = true
+
+
+function register_pregenerated_draggables() {
+    document.querySelectorAll('.draggable_window').forEach(draggable_window => {
+        highest_draggable += 1
+
+        document.querySelectorAll('.draggable_window').forEach(other_draggable => {
+            other_draggable.style.zIndex -= 1
+        })
+        draggable_window.style.zIndex = highest_draggable
+        console.log(draggable_window.style.zIndex)
+
+        let isGrabbed = false, startX, startY, initialX, initialY
+
+        draggable_window.addEventListener('mousedown', (e) => {
+            document.querySelectorAll('.draggable_window').forEach(other_draggable => {
+                other_draggable.style.zIndex -= 1
+            })
+            draggable_window.style.zIndex = highest_draggable
+            console.log(draggable_window.style.zIndex)
+
+            isGrabbed = true
             startX = e.clientX
             startY = e.clientY
-            initialX = draggable_div.offsetLeft
-            initialY = draggable_div.offsetTop
+            initialX = draggable_window.offsetLeft
+            initialY = draggable_window.offsetTop
         })
     
-        draggable_div.addEventListener('mousemove', (e) => {
-            if (isDragged) {
+        draggable_window.addEventListener('mousemove', (e) => {
+            if (isGrabbed) {
                 const newX = initialX + e.clientX - startX
                 const newY = initialY + e.clientY - startY
 
-                draggable_div.style.left = `${newX}px`
-                draggable_div.style.top  = `${newY}px`
+                draggable_window.style.left = `${newX}px`
+                draggable_window.style.top  = `${newY}px`
             }
         })
     
-        draggable_div.addEventListener('mouseup', (e) => {
-            isDragged = false
+        draggable_window.addEventListener('mouseup', (e) => {
+            isGrabbed = false
         })
     })
-})
+}
