@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    --color-dark: #0c1613;
+    --color-text-simple: #63acae;
+    --color-border: #83e9e2;
+    --color-text-white: #fff;
+
+    font-family: 'Roboto';
+}
+
+
+
+.pwin_win {
+    color: var(--color-text-simple);
+    /* background-color: var(--color-dark); */
+    border-top: 2px solid var(--color-border);
+    overflow: hidden;
+}
+
+.pwin_win>.border {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    width:  0;
+    height: 0;
+    border: 1px solid var(--color-border);
+}
+.pwin_win>.border.tl {
+    left:   0;
+    top:    0;
+    height: 2.2rem;
+}
+.pwin_win>.border.tr {
+    right:  0;
+    top:    0;
+    height: 2.2rem;
+}
+.pwin_win>.border.bl {
+    left:   0;
+    bottom: 0;
+    height: 2.2rem;
+}
+.pwin_win>.border.b {
+    right:  2rem;
+    bottom: 0;
+    width:  100%;
+}
+.pwin_win>.border.r {
+    right:  0;
+    bottom: 2rem;
+    height: 0.2rem;
+}
+.pwin_win>.border.br {
+    right:  -1.55rem;
+    bottom: -1.55rem;
+    width:   2.8rem;
+    height:  2.8rem;
+    transform: rotate(45deg);
+    border-width: 2.4px;
+}
+.pwin_win .pwin_body {
+    padding: 2px;
+    padding-top: 0;
+}
+.pwin_win>.bg {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top:  0;
+    left: 0;
+    width:  100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.pwin_win>.bg>* {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: #000;
+    /* background-color: var(--color-dark); */
+}
+.pwin_win>.bg>.t {
+    bottom: 2rem;
+    width:  100%;
+    height: 100%;
+}
+.pwin_win>.bg>.b {
+    right:  2rem;
+    bottom: 0;
+    width:  100%;
+    height: 2rem;
+}
+.pwin_win>.bg>.br {
+    right:  -4.35rem;
+    bottom: -4.35rem;
+    width:   2.8rem;
+    height:  2.8rem;
+    transform: rotate(45deg);
+    background-color: transparent;
+    border: 3rem solid #000;
+}
+
+
+
+.pwin_win .pwin_close {
+    /* padding: 0.25rem;
+    padding-left:  0.5rem;
+    padding-right: 0.5rem; */
+    width:  calc(0.7rem * 1.5);
+    height: calc(0.9rem * 1.5);
+    font-size: 0.5rem;
+    border: 2px solid var(--color-border);
+    margin-top:   5px;
+    margin-right: 8px;
+    position: relative;
+}
+.pwin_win .pwin_close>.smb {
+    content: "";
+    position: absolute;
+    width:  0;
+    height: 0;
+    border: 1px solid var(--color-border);
+}
+.pwin_win .pwin_close>.smb.c {
+    top:    calc(0.1rem * 1.5);
+    left:   calc(0.3rem * 1.5);
+    height: calc(0.5rem * 1.5);
+}
+.pwin_win .pwin_close>.smb.ht {
+    top:    calc(0.3rem * 1.5);
+    left:   calc(0.1rem * 1.5);
+    width:  calc(0.4rem * 1.5);
+}
+.pwin_win .pwin_close>.smb.hb {
+    top:    calc(0.6rem * 1.5);
+    left:   calc(0.1rem * 1.5);
+    width:  calc(0.4rem * 1.5);
+}
+.pwin_win .pwin_close>.smb.lt {
+    top:    calc(0.2rem * 1.5);
+    left:   calc(0.1rem * 1.5);
+    height: calc(0.1rem * 1.5);
+}
+.pwin_win .pwin_close>.smb.lb {
+    top:    calc(0.5rem * 1.5);
+    left:   calc(0.1rem * 1.5);
+    height: calc(0.1rem * 1.5);
+}
+.pwin_win .pwin_close>.smb.rt {
+    top:    calc(0.2rem * 1.5);
+    left:   calc(0.5rem * 1.5);
+    height: calc(0.1rem * 1.5);
+}
+.pwin_win .pwin_close>.smb.rb {
+    top:    calc(0.5rem * 1.5);
+    left:   calc(0.5rem * 1.5);
+    height: calc(0.2rem * 1.5);
+}
+.pwin_win .pwin_close>.smb.et {
+    right:  calc(-0.4rem * 1.5);
+    bottom: calc(0.35rem * 1.5);
+    width:  calc(0.3rem  * 1.5);
+}
+.pwin_win .pwin_close>.smb.eb {
+    right:  calc(-0.4rem * 1.5);
+    bottom: calc(0.1rem * 1.5);
+    width:  calc(0.3rem * 1.5);
+}
+.pwin_win .pwin_close:hover, .pwin_win .pwin_close:hover * {
+    border-color: crimson;
+}
+
+
+
+.pwin_win .top_bar {
+    display: flex;
+    flex-direction: row;
+    height: 2rem;
+    font-size: 1.5rem;
+}
+
+.pwin_win .top_bar .stretched {
+    position: relative;
+    justify-self: stretch;
+    flex: 1;
+    min-width: 2rem;
+}
+.pwin_win .top_bar .stretched * {
+    position: absolute;
+    width:  100%;
+    height: 100%;
+    left: 0;
+    top:  0;
+}
+
+.pwin_win .top_bar .title {
+    display: flex;
+    justify-content: center;
+    align-items:     center;
+    padding:       0.25rem;
+    padding-left:  0.5rem;
+    padding-right: 0.5rem;
+    font-weight: bold;
+    color: var(--color-text-white);
+    background-color: var(--color-border);
+    white-space: nowrap;
+    min-width: 1rem;
+}

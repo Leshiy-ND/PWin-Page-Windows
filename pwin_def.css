@@ -51,6 +51,6 @@
     color: hsl(0, 77%, 73%);
 }
 
-.pwin_win .draggable_body {
+.pwin_win .pwin_body {
     min-height: 1rem;
 }
