@@ -1,0 +1,21 @@
+.pwin_root {
+    position: fixed;
+    width:  100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+.pwin_win {
+    width: max-content;
+    position: absolute;
+    pointer-events: all;
+}
+
+.pwin_win .pwin_hand {
+    cursor: grab;
+}
+/* .pwin_win .pwin_hand:focus {
+    cursor: grabbing;
+} */

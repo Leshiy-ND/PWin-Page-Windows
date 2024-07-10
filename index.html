@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <script src="./script.js"> </script>
-    <link href="./style.css" rel="stylesheet" type="text/css" />
     <title>Pages within pages</title>
+    
+    <script src="./pwin.js">     </script>
+    <script src="./pwin_def.js"> </script>
+    <script src="./script.js">   </script>
+
+    <link rel="stylesheet" type="text/css" href="./pwin.css"     />
+    <link rel="stylesheet" type="text/css" href="./pwin_def.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css"    />
 </head>
 <body>
-    <div id="draggable_container">
-        <div class="draggable_window">
-            <div class="draggable_handle">handle</div>
+    <div class="pwin_root" id="pwin_root">
+        <div class="pwin_win">
+            <div class="pwin_hand">
+                <span>handle</span>
+            </div>
             <p>Some text1</p>
         </div>
-        <div class="draggable_window">
-            <div class="draggable_handle">handle</div>
+        <div class="pwin_win">
+            <div class="pwin_hand">
+                <span>handle</span>
+            </div>
             <p>Some text2</p>
         </div>
     </div>
     <a href="./cards.html">Link to cards.html</a>
+    <button id="spawn_window">Spawn new window.</button>
 </body>
 </html>

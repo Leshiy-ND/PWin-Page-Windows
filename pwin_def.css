@@ -1,0 +1,38 @@
+.pwin_win {
+    background-color: tan;
+    border: 2px solid sienna;
+    border-radius: 1rem;
+    left: 0;
+    top: 0;
+}
+
+.pwin_win .top_bar {
+    background-color: black;
+    color: wheat;
+    border-top-left-radius:  calc(0.5rem + 6px);
+    border-top-right-radius: calc(0.5rem + 6px);
+    padding: 0.25rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.pwin_win .top_bar .stretched {
+    position: relative;
+    justify-self: stretch;
+    flex: 1;
+}
+.pwin_win .top_bar .stretched * {
+    position: absolute;
+    width:  100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.pwin_win .top_bar .stretched .title_bar {
+    justify-content: center;
+    align-items: center
+}
+
+.pwin_win .draggable_body {
+    min-height: 1rem;
+}
