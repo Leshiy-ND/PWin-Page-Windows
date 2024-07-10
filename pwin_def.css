@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 800,
+    'GRAD' -25,
+    'opsz' 24;
+    user-select: none;
+    font-size: inherit;
+}
+
+
+
 .pwin_win {
     background-color: tan;
     border: 2px solid sienna;
@@ -31,6 +45,10 @@
 .pwin_win .top_bar .stretched .title_bar {
     justify-content: center;
     align-items: center
+}
+
+.pwin_win .top_bar .pwin_close:hover {
+    color: hsl(0, 77%, 73%);
 }
 
 .pwin_win .draggable_body {

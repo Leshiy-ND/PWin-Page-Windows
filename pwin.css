@@ -16,6 +16,7 @@
 .pwin_win .pwin_hand {
     cursor: grab;
 }
-/* .pwin_win .pwin_hand:focus {
-    cursor: grabbing;
-} */
+
+.pwin_win .pwin_close {
+    cursor: pointer;
+}

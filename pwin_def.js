@@ -11,10 +11,6 @@ function spawn_new_window_def(root_id, title, body_html) {
     top_bar.className = 'top_bar'
     new_window.appendChild(top_bar)
 
-    let icon = document.createElement('span')
-    icon.textContent = 'i'
-    top_bar.appendChild(icon)
-
     let stretched = document.createElement('div')
     stretched.className = 'stretched'
     top_bar.appendChild(stretched)
@@ -28,9 +24,10 @@ function spawn_new_window_def(root_id, title, body_html) {
     handle.className = 'pwin_hand'
     stretched.appendChild(handle)
 
-    let buttons = document.createElement('span')
-    buttons.textContent = 'buttons'
-    top_bar.appendChild(buttons)
+    let btn_close = document.createElement('span')
+    btn_close.className = 'material-symbols-outlined pwin_close'
+    btn_close.textContent = 'close'
+    top_bar.appendChild(btn_close)
 
     let body = document.createElement('div')
     body.className = 'pwin_body'
