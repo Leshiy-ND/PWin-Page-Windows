@@ -2,7 +2,13 @@
 
 Read in different langusges: [Русский](./README_RU.md).
 
+![preview](./preview.webp)
+
 PWin allows to create HTML containers, that would be similar in looks and functions to app windows on any common PC.
+
+Примеры:
+* [Pathos](https://leshiy-nd.github.io/PWin-Page-Windows/examples/pathos.html)
+* [Tan](https://leshiy-nd.github.io/PWin-Page-Windows/examples/tan.html)
 
 ## Window structure
 

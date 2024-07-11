@@ -2,7 +2,13 @@
 
 Прочитать на другом языке: [English](./README.md).
 
+![preview](./preview.webp)
+
 PWin позволяет создавать HTML-контейнеры схожие видом и функционалом с тем, как работают окна приложений на любом обычном компьютере.
+
+Примеры:
+* [Pathos](https://leshiy-nd.github.io/PWin-Page-Windows/examples/pathos.html)
+* [Tan](https://leshiy-nd.github.io/PWin-Page-Windows/examples/tan.html)
 
 ## Структура окна
 
