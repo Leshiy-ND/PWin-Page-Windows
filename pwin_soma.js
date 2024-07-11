@@ -1,9 +1,9 @@
-function spawn_new_window_soma(root_id, title, body_html) {
-    let root = document.getElementById(root_id)
+function spawn_new_window(title, body_html) {
+    let root = document.querySelector('.pwin_root')
 
     let new_window = document.createElement('div')
     new_window.className = 'pwin_win'
-    new_window.setAttribute('new', '')
+    new_window.setAttribute('pwin_new', '')
     root.appendChild(new_window)
 
     let top_bar = document.createElement('div')

@@ -71,14 +71,13 @@ html {
     left: 0;
     width:  100%;
     height: 100%;
-    opacity: 0.5;
+    opacity: 0.75;
 }
 .pwin_win>.bg>* {
     content: "";
     position: absolute;
     z-index: -1;
-    background-color: #000;
-    /* background-color: var(--color-dark); */
+    background-color: var(--color-dark);
 }
 .pwin_win>.bg>.t {
     bottom: 2rem;
@@ -98,15 +97,12 @@ html {
     height:  2.8rem;
     transform: rotate(45deg);
     background-color: transparent;
-    border: 3rem solid #000;
+    border: 3rem solid var(--color-dark);
 }
 
 
 
 .pwin_win .pwin_close {
-    /* padding: 0.25rem;
-    padding-left:  0.5rem;
-    padding-right: 0.5rem; */
     width:  calc(0.7rem * 1.5);
     height: calc(0.9rem * 1.5);
     font-size: 0.5rem;
@@ -114,6 +110,7 @@ html {
     margin-top:   5px;
     margin-right: 8px;
     position: relative;
+    cursor: pointer;
 }
 .pwin_win .pwin_close>.smb {
     content: "";
@@ -206,4 +203,13 @@ html {
     background-color: var(--color-border);
     white-space: nowrap;
     min-width: 1rem;
+}
+
+
+
+.pwin_win .pwin_hand {
+    cursor: grab;
+}
+.pwin_win .pwin_hand_g {
+    cursor: grabbing;
 }

@@ -47,6 +47,16 @@
     align-items: center
 }
 
+.pwin_win .pwin_hand {
+    cursor: grab;
+}
+.pwin_win .pwin_hand_g {
+    cursor: grabbing;
+}
+
+.pwin_win .pwin_close {
+    cursor: pointer;
+}
 .pwin_win .top_bar .pwin_close:hover {
     color: hsl(0, 77%, 73%);
 }

@@ -1,10 +1,10 @@
-function spawn_new_window_def(root_id, title, body_html) {
+function spawn_new_window(root_id, title, body_html) {
     let root = document.getElementById(root_id)
 
     let new_window = document.createElement('div')
     new_window.className = 'pwin_win'
     new_window.style.width = '300px'
-    new_window.setAttribute('new', '')
+    new_window.setAttribute('pwin_new', '')
     root.appendChild(new_window)
 
     let top_bar = document.createElement('div')

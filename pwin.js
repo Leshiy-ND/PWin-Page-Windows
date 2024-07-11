@@ -4,8 +4,8 @@ let highest_draggable = 0
 
 function register_new_windows() {
     document.querySelectorAll('.pwin_win').forEach(pwin_window => {
-        if (!pwin_window.hasAttribute('new')) return
-        pwin_window.removeAttribute('new')
+        if (!pwin_window.hasAttribute('pwin_new')) return
+        pwin_window.removeAttribute('pwin_new')
 
         highest_draggable += 1
         pwin_window.style.zIndex = highest_draggable
@@ -41,8 +41,7 @@ function register_new_windows() {
                 startY = e.clientY
                 initialX = pwin_window.offsetLeft
                 initialY = pwin_window.offsetTop
-                handle.style.transform = 'scale(100.0)'
-                handle.style.cursor = 'grabbing'
+                handle.className = 'pwin_hand_g'
             })
         
             handle.addEventListener('mousemove', (e) => {
@@ -57,8 +56,7 @@ function register_new_windows() {
         
             handle.addEventListener('mouseup', (e) => {
                 isGrabbed = false
-                handle.style.transform = 'scale(1.0)'
-                handle.style.cursor = ''
+                handle.className = 'pwin_hand'
             })
         }
     })

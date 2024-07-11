@@ -13,10 +13,7 @@
     pointer-events: all;
 }
 
-.pwin_win .pwin_hand {
-    cursor: grab;
-}
-
-.pwin_win .pwin_close {
-    cursor: pointer;
+.pwin_win .pwin_hand_g {
+    transform: scale(100.0);
+    z-index: 100;
 }
