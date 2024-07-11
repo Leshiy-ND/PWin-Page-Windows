@@ -1,6 +1,6 @@
 # PWin - Page Windows
 
-Read in different langusges: [Русский](./README_RU.md).
+Read in different languages: [Русский](./README_RU.md).
 
 ![preview](./preview.webp)
 
