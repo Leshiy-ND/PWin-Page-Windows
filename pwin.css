@@ -9,10 +9,14 @@
 
 .pwin_win {
     width: max-content;
+    max-width: 90vw;
     position: absolute;
     pointer-events: all;
 }
 
+.pwin_win .pwin_hand, .pwin_win .pwin_hand_g {
+    user-select: none;
+}
 .pwin_win .pwin_hand_g {
     transform: scale(100.0);
     z-index: 100;

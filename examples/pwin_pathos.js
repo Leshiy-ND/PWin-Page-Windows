@@ -1,8 +1,10 @@
-function spawn_new_window(title, body_html) {
+function spawn_new_window(title = '', body_html = '', w = '', h = '') {
     let root = document.querySelector('.pwin_root')
 
     let new_window = document.createElement('div')
     new_window.className = 'pwin_win'
+    if (w != '') new_window.style.width  = w + 'px'
+    if (h != '') new_window.style.height = h + 'px'
     new_window.setAttribute('pwin_new', '')
     root.appendChild(new_window)
 

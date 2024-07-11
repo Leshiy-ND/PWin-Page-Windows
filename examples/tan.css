@@ -1,0 +1,13 @@
+
+
+
+body {
+    background-color:bisque;
+}
+
+.body {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    border: 6px double chocolate;
+    border-radius: 5rem;
+}
