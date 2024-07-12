@@ -45,3 +45,9 @@ Optional:
 * Put any relevant stuff into innerHTML of __"pwin_body"__.
 
 Doesn't matter how deep or peculiar __hand__, __close__ and others were placed. While they're within family tree of a __win__, they will be picked up by __register_new_windows()__.
+
+## Custom PWin-window CSS styling
+
+You're free to do whatever you feel like.
+
+The only thing I would restrain you from is putting _"overflow: hidden;"_ on __"pwin_win"__, as it will cut down __"pwin_hand_g"__. Which would othen lead to it loosing mouse cursor, as it may be seen on [Pathos](https://leshiy-nd.github.io/PWin-Page-Windows/examples/pathos.html) example, where I used hidden overflow to manage the border and "cutted off" angle. Simply add special DIV for whatever may go loose.
