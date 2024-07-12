@@ -2,10 +2,15 @@
 
 
 .body {
-    margin: 10rem;
-    margin-left:  16rem;
-    margin-right: 16rem;
+    margin:    20vw;
+    margin-top: 5vh;
     padding: 2rem;
+}
+@media (orientation: portrait) {
+    .body {
+        margin:    10vw;
+        margin-top: 5vh;
+    }
 }
 
 h1 {
@@ -23,8 +28,14 @@ hr {
     gap: 1rem;
 }
 
+@media (orientation: landscape) {
+    #pwin_gen>* {
+        width: max-content;
+    }
+}
+
 #pwin_gen>* {
-    width: max-content;
+    max-width: 100%;
 }
 
 .pwin_win {
